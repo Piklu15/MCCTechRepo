@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="gridCell" id="gTV-IL-0wX" customClass="PhotoCollectionViewCell" customModule="MCCTechTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="198" height="213"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="198" height="213"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQ9-fG-4U4">
+                        <rect key="frame" x="0.0" y="0.0" width="198" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" image="PlaceHolderImage" translatesAutoresizingMaskIntoConstraints="NO" id="9Sh-T5-h2L">
+                        <rect key="frame" x="8" y="32" width="182" height="173"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="aQ9-fG-4U4" secondAttribute="trailing" id="WpN-QZ-GNP"/>
+                <constraint firstAttribute="trailing" secondItem="9Sh-T5-h2L" secondAttribute="trailing" constant="8" id="d7t-qx-YWV"/>
+                <constraint firstItem="9Sh-T5-h2L" firstAttribute="top" secondItem="aQ9-fG-4U4" secondAttribute="bottom" constant="8" id="fWf-8p-YBD"/>
+                <constraint firstItem="9Sh-T5-h2L" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="hBz-pm-2Cx"/>
+                <constraint firstAttribute="bottom" secondItem="9Sh-T5-h2L" secondAttribute="bottom" constant="8" id="kmx-lt-g4r"/>
+                <constraint firstItem="aQ9-fG-4U4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kvI-Zf-QCL"/>
+                <constraint firstItem="aQ9-fG-4U4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ngC-HS-geD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="198" height="213"/>
+            <connections>
+                <outlet property="imageVIew" destination="9Sh-T5-h2L" id="q9C-I4-hm0"/>
+                <outlet property="title" destination="aQ9-fG-4U4" id="yzC-Du-Nea"/>
+            </connections>
+            <point key="canvasLocation" x="108" y="240.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="PlaceHolderImage" width="50" height="50"/>
+    </resources>
+</document>

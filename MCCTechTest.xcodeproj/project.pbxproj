@@ -12,6 +12,13 @@
 		913384262105C48B00E20BC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913384242105C48B00E20BC2 /* Main.storyboard */; };
 		913384282105C48C00E20BC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913384272105C48C00E20BC2 /* Assets.xcassets */; };
 		9133842B2105C48C00E20BC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913384292105C48C00E20BC2 /* LaunchScreen.storyboard */; };
+		9133843B2105D71400E20BC2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9133843A2105D71400E20BC2 /* Alamofire.framework */; };
+		9133843D2105DB6300E20BC2 /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133843C2105DB6300E20BC2 /* PhotoListViewModel.swift */; };
+		9133843F2105DB7000E20BC2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133843E2105DB7000E20BC2 /* Photo.swift */; };
+		913384442105E24000E20BC2 /* PhotoGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913384432105E24000E20BC2 /* PhotoGridViewController.swift */; };
+		913384472105E2D300E20BC2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913384452105E2D300E20BC2 /* PhotoCollectionViewCell.swift */; };
+		913384482105E2D300E20BC2 /* PhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913384462105E2D300E20BC2 /* PhotoCollectionViewCell.xib */; };
+		9133844B2105EC0D00E20BC2 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9133844A2105EC0D00E20BC2 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		913384272105C48C00E20BC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9133842A2105C48C00E20BC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9133842C2105C48C00E20BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9133843A2105D71400E20BC2 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		9133843C2105DB6300E20BC2 /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
+		9133843E2105DB7000E20BC2 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		913384432105E24000E20BC2 /* PhotoGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGridViewController.swift; sourceTree = "<group>"; };
+		913384452105E2D300E20BC2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		913384462105E2D300E20BC2 /* PhotoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionViewCell.xib; sourceTree = "<group>"; };
+		9133844A2105EC0D00E20BC2 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9133843B2105D71400E20BC2 /* Alamofire.framework in Frameworks */,
+				9133844B2105EC0D00E20BC2 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +56,7 @@
 			children = (
 				9133841F2105C48B00E20BC2 /* MCCTechTest */,
 				9133841E2105C48B00E20BC2 /* Products */,
+				913384392105D71400E20BC2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +72,59 @@
 			isa = PBXGroup;
 			children = (
 				913384202105C48B00E20BC2 /* AppDelegate.swift */,
-				913384222105C48B00E20BC2 /* ViewController.swift */,
+				913384492105E2DB00E20BC2 /* View */,
+				913384422105DB8800E20BC2 /* Controller */,
+				913384412105DB7E00E20BC2 /* Model */,
+				913384402105DB7600E20BC2 /* ViewModel */,
 				913384242105C48B00E20BC2 /* Main.storyboard */,
 				913384272105C48C00E20BC2 /* Assets.xcassets */,
 				913384292105C48C00E20BC2 /* LaunchScreen.storyboard */,
 				9133842C2105C48C00E20BC2 /* Info.plist */,
 			);
 			path = MCCTechTest;
+			sourceTree = "<group>";
+		};
+		913384392105D71400E20BC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9133844A2105EC0D00E20BC2 /* AlamofireImage.framework */,
+				9133843A2105D71400E20BC2 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		913384402105DB7600E20BC2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9133843C2105DB6300E20BC2 /* PhotoListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		913384412105DB7E00E20BC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9133843E2105DB7000E20BC2 /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		913384422105DB8800E20BC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				913384222105C48B00E20BC2 /* ViewController.swift */,
+				913384432105E24000E20BC2 /* PhotoGridViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		913384492105E2DB00E20BC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				913384452105E2D300E20BC2 /* PhotoCollectionViewCell.swift */,
+				913384462105E2D300E20BC2 /* PhotoCollectionViewCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +137,7 @@
 				913384192105C48B00E20BC2 /* Sources */,
 				9133841A2105C48B00E20BC2 /* Frameworks */,
 				9133841B2105C48B00E20BC2 /* Resources */,
+				913384382105D6EE00E20BC2 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -123,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9133842B2105C48C00E20BC2 /* LaunchScreen.storyboard in Resources */,
+				913384482105E2D300E20BC2 /* PhotoCollectionViewCell.xib in Resources */,
 				913384282105C48C00E20BC2 /* Assets.xcassets in Resources */,
 				913384262105C48B00E20BC2 /* Main.storyboard in Resources */,
 			);
@@ -130,13 +195,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		913384382105D6EE00E20BC2 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		913384192105C48B00E20BC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913384442105E24000E20BC2 /* PhotoGridViewController.swift in Sources */,
+				9133843F2105DB7000E20BC2 /* Photo.swift in Sources */,
 				913384232105C48B00E20BC2 /* ViewController.swift in Sources */,
+				9133843D2105DB6300E20BC2 /* PhotoListViewModel.swift in Sources */,
 				913384212105C48B00E20BC2 /* AppDelegate.swift in Sources */,
+				913384472105E2D300E20BC2 /* PhotoCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +369,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MCCTechTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,6 +390,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MCCTechTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
